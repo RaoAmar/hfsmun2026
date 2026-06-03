@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HFSMUN 2026 | New Age Diplomacy</title>
+    <meta
+      name="description"
+      content="HFSMUN 2026 - Hiranandani Foundation School Model United Nations."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+    <div class="cursor-light" aria-hidden="true"></div>
+    <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+    <header class="site-header" id="siteHeader">
+      <a class="brand magnetic" href="#home">
+        <img src="assets/hfsmun-logo.png" alt="HFSMUN logo" />
+        <span>
+          <strong>HFSMUN</strong>
+          <small>2026</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home">HOME</a>
+        <a href="#registration">REGISTRATION</a>
+
+        <div class="nav-dropdown">
+          <button type="button">THE TEAM</button>
+          <div class="dropdown-panel">
+            <a href="#secretariat">SECRETARIAT</a>
+            <a href="#organizing-committee">ORGANIZING COMMITTEE</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button type="button">COMMITTEES</button>
+          <div class="dropdown-panel committee-menu">
+            <a href="#unhrc">UNHRC</a>
+            <a href="#unsc">UNSC</a>
+            <a href="#disec">DISEC</a>
+            <a href="#imf">IMF</a>
+            <a href="#unga">UNGA</a>
+            <a href="#icc">ICC</a>
+          </div>
+        </div>
+
+        <a href="#resources">RESOURCES</a>
+        <a href="#press">PRESS RELEASES</a>
+        <a href="#photographs">PHOTOGRAPHS</a>
+
+        <div class="nav-dropdown">
+          <button type="button">MORE</button>
+          <div class="dropdown-panel">
+            <a href="#faqs">FAQs</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home" data-nav="HOME">
+        <div class="hero-orbit"></div>
+
+        <div class="hero-content">
+          <div class="logo-stage reveal">
+            <img class="hero-logo magnetic" src="assets/hfsmun-logo.png" alt="HFSMUN logo" />
+          </div>
+
+          <p class="eyebrow reveal">Hiranandani Foundation School Model United Nations</p>
+
+          <h1 class="hero-title reveal">
+            <span>HFSMUN</span>
+            <span>2026</span>
+          </h1>
+
+          <p class="hero-subtitle reveal">
+            New age diplomacy in a world under pressure: crisis strategy, global policy,
+            press intelligence, and three unforgettable days of negotiation in Mumbai.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn primary magnetic" href="#registration">REGISTER NOW</a>
+            <a class="btn ghost magnetic" href="#media">EXPLORE</a>
+          </div>
+
+          <p class="hero-subtitle">
+            <span class="static-txt"></span><br>
+            <span class="typewriter-container">
+              <span class="type-txt" id="typewriter"></span><span class="cursor">|</span>
+            </span>
+          </p>          
+        </div>
+
+
+        <a class="scroll-indicator" href="#media">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="section media-section" id="media" data-nav="HOME">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Cinematic Media</p>
+            <h2>Three films. One immersive launch sequence.</h2>
+            <p>
+              Trailer, teaser, and promotional video slots are designed as premium hover-preview cards.
+              Add the final MP4 files later and the cards will autoplay muted previews on hover.
+            </p>
+          </div>
+
+          <div class="media-grid">
+            <article class="video-card featured interactive-card reveal" data-video="trailer" role="button" tabindex="0">
+              <video muted loop playsinline preload="none" data-src="media/hfsmun-2026-trailer.mp4"></video>
+              <div class="video-art art-trailer"></div>
+              <div class="card-glow"></div>
+              <div class="video-copy">
+                <span>TRAILER</span>
+                <h3>Official Trailer</h3>
+                <p>The primary cinematic opening for HFSMUN 2026.</p>
+              </div>
+            </article>
+
+            <article class="video-card interactive-card reveal" data-video="teaser" role="button" tabindex="0">
+              <video muted loop playsinline preload="none" data-src="media/hfsmun-2026-teaser.mp4"></video>
+              <div class="video-art art-teaser"></div>
+              <div class="card-glow"></div>
+              <div class="video-copy">
+                <span>TEASER</span>
+                <h3>Launch Teaser</h3>
+                <p>A sharp first reveal for the public launch.</p>
+              </div>
+            </article>
+
+            <article class="video-card interactive-card reveal" data-video="promo" role="button" tabindex="0">
+              <video muted loop playsinline preload="none" data-src="media/hfsmun-2026-promotional.mp4"></video>
+              <div class="video-art art-promo"></div>
+              <div class="card-glow"></div>
+              <div class="video-copy">
+                <span>PROMOTIONAL</span>
+                <h3>Delegate Film</h3>
+                <p>A polished campaign video for delegates and schools.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section registration-section" id="registration" data-nav="REGISTRATION">
+        <div class="section-inner">
+          <div class="section-heading center reveal">
+            <p class="eyebrow">Registration</p>
+            <h2>Everything delegates need, in one glass panel.</h2>
+          </div>
+
+          <div class="registration-panel reveal interactive-card">
+            <article>
+              <span>01</span>
+              <h3>WHAT?</h3>
+              <p>Hiranandani Foundation School Model United Nations 2026</p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3>WHEN?</h3>
+              <p>1st, 2nd &amp; 3rd August</p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3>WHERE?</h3>
+              <p>
+                Meluha - The Fern, Central Ave, Hiranandani Gardens,
+                Powai, Mumbai, Maharashtra 400076
+              </p>
+            </article>
+
+            <article>
+              <span>04</span>
+              <h3>CONTACT US</h3>
+              <p>
+                Dhwani Bhargava<br />
+                Secretary-General<br /><br />
+                Naivedya Swami<br />
+                Director-General<br /><br />
+                <a href="mailto:hfsmun@hfspowai.in">hfsmun@hfspowai.in</a>
+              </p>
+            </article>
+          </div>
+
+          <div class="social-row reveal">
+            <a class="icon-link magnetic" href="mailto:hfsmun@hfspowai.in" aria-label="Email">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 6h16v12H4z" />
+                <path d="m4 7 8 6 8-6" />
+              </svg>
+            </a>
+
+            <a class="icon-link magnetic" href="#photographs" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="4" y="4" width="16" height="16" rx="5" />
+                <circle cx="12" cy="12" r="3.5" />
+                <path d="M17.3 6.7h.01" />
+              </svg>
+            </a>
+
+            <a class="icon-link magnetic" href="#press" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" class="filled">
+                <path d="M6.6 8.9H3.8V20h2.8V8.9ZM5.2 4a1.6 1.6 0 1 0 0 3.2A1.6 1.6 0 0 0 5.2 4Zm15 9.7c0-3-1.6-4.9-4.1-4.9-1.4 0-2.4.8-2.9 1.6V8.9h-2.7V20h2.8v-5.8c0-1.6.8-2.7 2.1-2.7 1.2 0 1.9.9 1.9 2.6V20h2.9v-6.3Z" />
+              </svg>
+            </a>
+          </div>
+
+          <p class="copyright reveal">
+            &copy; HFS Model United Nations 2026 | All Rights Reserved
+          </p>
+        </div>
+      </section>
+
+      <section class="section team-section" id="secretariat" data-nav="THE TEAM">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">The Team</p>
+            <h2>Secretariat</h2>
+            <p>
+              Elegant profile cards with placeholder portraits until final media is available.
+            </p>
+          </div>
+
+          <div class="profile-grid">
+            <article class="profile-card interactive-card reveal">
+              <div class="profile-image" data-initials="DB"></div>
+              <div class="profile-copy">
+                <span>Secretary-General</span>
+                <h3>Dhwani Bhargava</h3>
+                <p>
+                  Placeholder bio: Dhwani leads the vision, diplomatic standard, and delegate
+                  experience of HFSMUN 2026 with precision and poise.
+                </p>
+              </div>
+            </article>
+
+            <article class="profile-card interactive-card reveal">
+              <div class="profile-image" data-initials="NS"></div>
+              <div class="profile-copy">
+                <span>Director-General</span>
+                <h3>Naivedya Swami</h3>
+                <p>
+                  Placeholder bio: Naivedya oversees operations, committee readiness, and conference
+                  execution across every moving part of the summit.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section oc-section" id="organizing-committee" data-nav="THE TEAM">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Organizing Committee</p>
+            <h2>The machinery behind the summit.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card interactive-card reveal">
+              <span>01</span>
+              <h3>Logistics</h3>
+              <p>Venue movement, room control, registration flow, and schedule precision.</p>
+            </article>
+
+            <article class="feature-card interactive-card reveal">
+              <span>02</span>
+              <h3>Press &amp; Design</h3>
+              <p>Visual identity, releases, photography, editorial desk, and media wall.</p>
+            </article>
+
+            <article class="feature-card interactive-card reveal">
+              <span>03</span>
+              <h3>Delegate Affairs</h3>
+              <p>Communication, allocations, committee briefs, and procedural support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section committees-section" id="committees" data-nav="COMMITTEES">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Committees</p>
+            <h2>Six committees. Six arenas of pressure.</h2>
+            <p>Hover, tilt, and open each card for its agenda and committee brief.</p>
+          </div>
+
+          <div class="committee-grid">
+            <article class="committee-card interactive-card reveal" id="unhrc" data-committee="unhrc" role="button" tabindex="0">
+              <span>UNHRC</span>
+              <h3>Human Rights Council</h3>
+              <p>Identity, statelessness, humanitarian access, and rights under conflict.</p>
+            </article>
+
+            <article class="committee-card interactive-card reveal" id="unsc" data-committee="unsc" role="button" tabindex="0">
+              <span>UNSC</span>
+              <h3>Security Council</h3>
+              <p>Cyber conflict, information warfare, and international peace.</p>
+            </article>
+
+            <article class="committee-card interactive-card reveal" id="disec" data-committee="disec" role="button" tabindex="0">
+              <span>DISEC</span>
+              <h3>Disarmament</h3>
+              <p>Autonomous weapons, AI targeting, escalation, and accountability.</p>
+            </article>
+
+            <article class="committee-card interactive-card reveal" id="imf" data-committee="imf" role="button" tabindex="0">
+              <span>IMF</span>
+              <h3>International Monetary Fund</h3>
+              <p>CBDCs, banking disruption, capital flight, and vulnerable economies.</p>
+            </article>
+
+            <article class="committee-card interactive-card reveal" id="unga" data-committee="unga" role="button" tabindex="0">
+              <span>UNGA</span>
+              <h3>General Assembly</h3>
+              <p>Placeholder agenda for multilateral cooperation and global reform.</p>
+            </article>
+
+            <article class="committee-card interactive-card reveal" id="icc" data-committee="icc" role="button" tabindex="0">
+              <span>ICC</span>
+              <h3>International Criminal Court</h3>
+              <p>Individual criminal responsibility and justice under armed conflict.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section resources-section" id="resources" data-nav="RESOURCES">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Resources</p>
+            <h2>Download desk for serious preparation.</h2>
+            <p>
+              Animated document previews, glowing actions, and hover expansion without extra text.
+            </p>
+          </div>
+
+          <div class="resource-grid">
+            <article class="resource-card interactive-card reveal">
+              <div class="doc-preview"><span>BG</span></div>
+              <h3>Background Guides</h3>
+              <p>Committee background material and research direction.</p>
+              <a
+                href="data:text/plain;charset=utf-8,HFSMUN%202026%20Background%20Guides%20placeholder."
+                download="HFSMUN-Background-Guides.txt"
+              >
+                Download
+              </a>
+            </article>
+
+            <article class="resource-card interactive-card reveal">
+              <div class="doc-preview"><span>SG</span></div>
+              <h3>Study Guides</h3>
+              <p>Procedure, agenda framing, and committee-specific context.</p>
+              <a
+                href="data:text/plain;charset=utf-8,HFSMUN%202026%20Study%20Guides%20placeholder."
+                download="HFSMUN-Study-Guides.txt"
+              >
+                Download
+              </a>
+            </article>
+
+            <article class="resource-card interactive-card reveal">
+              <div class="doc-preview"><span>RP</span></div>
+              <h3>Research Papers</h3>
+              <p>Source discipline, policy research, and evidence mapping.</p>
+              <a
+                href="data:text/plain;charset=utf-8,HFSMUN%202026%20Research%20Papers%20placeholder."
+                download="HFSMUN-Research-Papers.txt"
+              >
+                Download
+              </a>
+            </article>
+
+            <article class="resource-card interactive-card reveal">
+              <div class="doc-preview"><span>CM</span></div>
+              <h3>Country Matrix</h3>
+              <p>Allocations, portfolio notes, and committee difficulty.</p>
+              <a
+                href="data:text/plain;charset=utf-8,HFSMUN%202026%20Country%20Matrix%20placeholder."
+                download="HFSMUN-Country-Matrix.txt"
+              >
+                Download
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section press-section" id="press" data-nav="PRESS RELEASES">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Press Releases</p>
+            <h2>A newsroom built for momentum.</h2>
+          </div>
+
+          <div class="press-layout">
+            <article class="press-feature interactive-card reveal">
+              <span>Featured Release</span>
+              <h3>HFSMUN 2026 announces a high-intensity diplomatic edition.</h3>
+              <p>
+                Placeholder release: HFSMUN returns with six committees, a redesigned media desk,
+                and an immersive conference experience.
+              </p>
+            </article>
+
+            <article class="press-card interactive-card reveal">
+              <span>Update</span>
+              <h3>Committee portfolio preview</h3>
+              <p>Final agenda briefs and study guides will be released through Resources.</p>
+            </article>
+
+            <article class="press-card interactive-card reveal">
+              <span>Notice</span>
+              <h3>Venue and delegate services</h3>
+              <p>Arrival flow, hospitality, and room allocations will be shared soon.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section photographs-section" id="photographs" data-nav="PHOTOGRAPHS">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Photographs</p>
+            <h2>Immersive media gallery.</h2>
+            <p>Masonry-style frames enlarge smoothly and open into a cinematic lightbox.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <button class="gallery-card tall interactive-card reveal" data-gallery="Opening Plenary">
+              <span>Opening Plenary</span>
+            </button>
+
+            <button class="gallery-card wide interactive-card reveal" data-gallery="Press Room">
+              <span>Press Room</span>
+            </button>
+
+            <button class="gallery-card interactive-card reveal" data-gallery="UNSC Crisis">
+              <span>UNSC Crisis</span>
+            </button>
+
+            <button class="gallery-card interactive-card reveal" data-gallery="DISEC Floor">
+              <span>DISEC Floor</span>
+            </button>
+
+            <button class="gallery-card interactive-card reveal" data-gallery="Delegate Lounge">
+              <span>Delegate Lounge</span>
+            </button>
+
+            <button class="gallery-card wide interactive-card reveal" data-gallery="Awards Night">
+              <span>Awards Night</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faqs" data-nav="MORE">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">FAQs</p>
+            <h2>Fast answers, smooth reveals.</h2>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item reveal">
+              <button type="button">
+                Who can attend HFSMUN 2026? 
+                <span>+</span>
+              </button>
+              <p>
+                HFSMUN 2026 is open to students from grades 8 to 12 from any school. Both individual delegates and school delegations are welcome to register.
+              </p>
+            </article>
+
+            <article class="faq-item reveal">
+              <button type="button">
+                What is the registration fee? 
+                <span>+</span>
+              </button>
+              <p>
+                Registration details and fees will be communicated via the official registration form. Please reach out to hfsmun@hfspowai.in for queries.
+              </p>
+            </article>
+
+            <article class="faq-item reveal">
+              <button type="button">
+                Is prior MUN experience required? 
+                <span>+</span>
+              </button>
+              <p>
+                Not at all. HFSMUN 2026 welcomes delegates of all experience levels — from first-timers to seasoned MUNers. Our training sessions and background guides ensure every delegate is prepared.
+              </p>
+            </article>
+            
+            <article class="faq-item reveal">
+              <button type="button">
+                What is a position paper and is it mandatory? 
+                <span>+</span>
+              </button>
+              <p>
+                A position paper outlines your country's stance on the committee's agenda. It is highly recommended and factors into Best Delegate awards. The template is available in our Resources section.
+              </p>
+            </article>
+            
+            <article class="faq-item reveal">
+              <button type="button">
+                What is the dress code? 
+                <span>+</span>
+              </button>
+              <p>
+                Western or Indian formal attire is expected throughout all three days. The Code of Conduct document in our Resources section has full details.
+              </p>
+            </article>
+            
+            <article class="faq-item reveal">
+              <button type="button">
+                Will accommodation be arranged? 
+                <span>+</span>
+              </button>
+              <p>
+                Outstation delegates can contact us for accommodation assistance. Meluha — The Fern offers world-class facilities and we will do our best to facilitate comfortable stays.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" data-nav="MORE">
+        <div class="section-inner contact-layout">
+          <div class="contact-copy reveal">
+            <p class="eyebrow">Contact Us</p>
+            <h2>Reach the HFSMUN desk.</h2>
+            <p>
+              Dhwani Bhargava, Secretary-General<br />
+              Naivedya Swami, Director-General<br />
+              <a href="mailto:hfsmun@hfspowai.in">hfsmun@hfspowai.in</a>
+            </p>
+          </div>
+
+          <form class="contact-form interactive-card reveal" id="contactForm">
+            <label>
+              <span>Name</span>
+              <input name="name" required />
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" required />
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" required></textarea>
+            </label>
+
+            <button class="btn primary magnetic" type="submit">SEND PREVIEW</button>
+            <p id="formNote" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="assets/hfsmun-logo.png" alt="" />
+      <p>&copy; HFS Model United Nations 2026 | All Rights Reserved</p>
+    </footer>
+
+    <div class="modal" id="modal" hidden>
+      <button
+        class="modal-backdrop"
+        type="button"
+        aria-label="Close modal"
+        data-close-modal
+      ></button>
+
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" aria-label="Close modal" data-close-modal>
+          <svg viewBox="0 0 24 24">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+
+        <div class="modal-body" id="modalBody"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
