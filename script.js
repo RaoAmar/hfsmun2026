@@ -643,3 +643,38 @@ function type() {
 
 // Start the animation once the DOM content is ready
 document.addEventListener('DOMContentLoaded', type);
+
+// ─── COUNTER ANIMATION ENGINE ─────────────────────────────────────────
+function animCounter(el, target) {
+  let count = 0;
+  const step = target / 60; // Divides the animation into 60 frames (~1 second)
+  const interval = setInterval(() => {
+    count += step;
+    if (count >= target) {
+      el.textContent = target + (el.dataset.suffix || '');
+      clearInterval(interval);
+    } else {
+      el.textContent = Math.floor(count) + (el.dataset.suffix || '');
+    }
+  }, 16); // ~60fps timing
+}
+
+// Hook into intersection observer to trigger only when visible
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const numEl = entry.target.querySelector('.stat-num');
+      if (numEl && !numEl.dataset.animated) {
+        numEl.dataset.animated = "true"; // Prevents running animation twice
+        const targetVal = parseInt(numEl.textContent, 10);
+        animCounter(numEl, targetVal);
+      }
+    }
+  });
+}, { threshold: 0.2 });
+
+// Initialize observer on DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  const statCards = document.querySelectorAll('.stat-card');
+  statCards.forEach(card => statObserver.observe(card));
+});
