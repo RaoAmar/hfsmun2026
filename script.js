@@ -678,3 +678,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const statCards = document.querySelectorAll('.stat-card');
   statCards.forEach(card => statObserver.observe(card));
 });
+
+// ─── PARALLAX HERO ───────────────────────────────────────────────────
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  const bg=document.getElementById('home-bg');
+  if(bg&&y<window.innerHeight){
+    bg.style.backgroundPositionY=`calc(50% + ${y*.12}px)`;
+  }
+});
